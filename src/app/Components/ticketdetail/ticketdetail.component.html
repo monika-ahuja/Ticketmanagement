@@ -1,0 +1,78 @@
+<p>ticketdetail works!!!!</p>
+<!-- ticket-detail.component.html -->
+<div *ngIf="statusUpdateMessage" class="alert alert-info">
+  {{ statusUpdateMessage }}
+</div>
+<div class="container mt-3">
+  <button class="btn btn-secondary mb-3" routerLink="/ticket-list">Back</button>
+  <div *ngIf="ticket">
+    <h2 align="center">Ticket Details</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>Title</th>
+        <td>{{ ticket.title }}</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{ ticket.description }}</td>
+      </tr>
+      <tr>
+        <th>Created Date</th>
+        <td>{{ ticket.createdAt | date: 'short' }}</td>
+      </tr>
+      <tr>
+        <!-- <th>Status</th>
+        <td>{{ ticket.status }}</td> -->
+        <th>Status</th>
+        <td [ngClass]="{'status-closed': ticket.status === 'Closed'}">
+          {{ ticket.status }}
+        </td>
+      </tr>
+      <!-- <tr>
+        <th>StatusUpdated At</th>
+        <td>{{ ticket.statusUpdatedAt | date: 'short' }}</td>
+      </tr> -->
+       <tr>
+        <th>Updated date</th>
+        <td>{{ ticket.statusUpdatedAt | date: 'short' }}</td>
+      </tr>
+      <!-- <p>Status Updated At: {{ ticket.statusUpdatedAt | date:'medium' }}</p>  -->
+    </table>
+
+
+
+    <!-- <div class="message-section mt-3">
+      <h3 align="center">Send a Message</h3>
+      <div class="form-group mb-3">
+        <textarea [(ngModel)]="message" class="form-control" rows="3" placeholder="Enter your message"></textarea>
+      </div>
+      <button class="btn btn-primary" (click)="sendMessage()">Send</button>
+    </div> -->
+
+    <!-- Display Messages -->
+    <h3>Messages</h3>
+  <div *ngFor="let message of messages; let i = index" class="message-container">
+    <p class="message-content">
+      <strong>{{ message?.sender }}:</strong> {{ message?.text }}
+      <span class="timestamp">{{ message?.timestamp | date:'short' }}</span>
+      <!-- <button (click)="toggleCollapse(i)">Toggle Details</button>
+    </p>
+    <div *ngIf="isExpanded[i]">
+      <p>Message Details: {{ message.text }}</p> -->
+    <!-- </div> -->
+  </div>
+
+  <div *ngIf="ticket.status !== 'Closed'" class="message-section mt-3">
+  <h3>Send a Message</h3>
+  <!-- [disabled]="ticket.status === 'Closed'" -->
+  <textarea [(ngModel)]="message" rows="3" cols="30"  class="message-textarea"  placeholder="Type your message here"></textarea>&nbsp;
+  <button (click)="sendMessage()"  class="btn btn-primary"  >Send Message</button>
+</div>
+
+  <!-- Display status below the messages when the ticket is closed -->
+  <div *ngIf="ticket.status === 'Closed'" class="alert alert-warning alert-sm mt-3">
+    This ticket is closed.
+  </div>
+
+  </div>
+</div>

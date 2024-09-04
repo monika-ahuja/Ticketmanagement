@@ -1,0 +1,23 @@
+.ticket{
+    color: red;
+    
+}
+.table,.table th {
+    border: 3px solid #000; /* Increase border thickness */
+    border-collapse: collapse;
+    background-color: #c2baba;
+    text-align: center;
+  }
+
+
+  /* ticket-list.component.css */
+/* .table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  } */
+  

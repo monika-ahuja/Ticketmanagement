@@ -1,0 +1,40 @@
+<div class="content container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2>Admin Dashboard</h2>
+          <table class="table table-bordered mt-4">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+                <td>
+                  <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+                 
+
+                </td>
+                <td>
+                  <button (click)="viewTickets(user.id)" class="btn btn-primary">View History</button>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+   
+      
+    </div>
+   
+    
+    
+  <!-- </div> -->

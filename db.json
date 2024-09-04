@@ -1,0 +1,692 @@
+{
+  "users": [
+    {
+      "email": "megha@gmail.com",
+      "password": "$2a$10$m99loiejXupX02ZM1CQKtObxu14uZLrXp0cxnJJxUxXCLtFkr0qDm",
+      "username": "megha",
+      "mobile": "9869847889",
+      "role": "admin",
+      "id": 8
+    },
+    {
+      "email": "pankaj@gmail.com",
+      "password": "$2a$10$/7UwBSJr.Qs7sL2O2PiRFez75O.OcVGqDWPedYYwA.LSHnBpKNfLG",
+      "username": "pankaj",
+      "mobile": "3947676895",
+      "role": "admin",
+      "id": 12
+    },
+    {
+      "email": "komal@gmail.com",
+      "password": "$2a$10$FxKKzNFtCPB/kGNTsz5kdOXVhgieW7Ge7zAIlNYeRLlC17l1YMYNG",
+      "username": "komal",
+      "mobile": "3947349693",
+      "role": "user",
+      "id": 15
+    },
+    {
+      "email": "medha@gmail.com",
+      "password": "$2a$10$LA6JN7Y/SmiEzA6FSxmlPuL/nfNTBeGe6Oq0h/7r/fS996CPP7PSC",
+      "username": "Medha",
+      "mobile": "3244444324",
+      "role": "user",
+      "id": 17
+    }
+  ],
+  "auditLogs": [
+    {
+      "timestamp": "2024-08-16T11:32:14.632Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 1
+    },
+    {
+      "timestamp": "2024-08-16T11:33:10.222Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 2
+    },
+    {
+      "timestamp": "2024-08-16T11:33:26.716Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 3
+    },
+    {
+      "timestamp": "2024-08-16T12:10:39.612Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 4
+    },
+    {
+      "timestamp": "2024-08-16T12:11:44.571Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 5
+    },
+    {
+      "timestamp": "2024-08-16T12:12:14.478Z",
+      "action": "User logged in",
+      "userId": 17,
+      "id": 6
+    },
+    {
+      "timestamp": "2024-08-16T12:25:38.885Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 7
+    },
+    {
+      "timestamp": "2024-08-16T12:25:47.994Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 8
+    },
+    {
+      "timestamp": "2024-08-16T12:31:06.945Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 9
+    },
+    {
+      "timestamp": "2024-08-19T05:22:12.990Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 10
+    },
+    {
+      "timestamp": "2024-08-19T05:33:39.185Z",
+      "action": "User logged in",
+      "userId": 17,
+      "id": 11
+    },
+    {
+      "timestamp": "2024-08-19T08:40:51.745Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 12
+    },
+    {
+      "timestamp": "2024-08-19T08:41:28.485Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 13
+    },
+    {
+      "timestamp": "2024-08-19T08:41:38.674Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 14
+    },
+    {
+      "timestamp": "2024-08-19T09:49:52.797Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 15
+    },
+    {
+      "timestamp": "2024-08-19T09:51:47.974Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 16
+    },
+    {
+      "timestamp": "2024-08-20T05:35:44.692Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 17
+    },
+    {
+      "timestamp": "2024-08-20T05:38:22.746Z",
+      "action": "User logged in",
+      "userId": 17,
+      "id": 18
+    },
+    {
+      "timestamp": "2024-08-20T12:16:45.444Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 19
+    },
+    {
+      "timestamp": "2024-08-21T06:17:37.730Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 20
+    },
+    {
+      "timestamp": "2024-08-21T08:05:52.687Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 21
+    },
+    {
+      "timestamp": "2024-08-21T08:15:32.734Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 22
+    },
+    {
+      "timestamp": "2024-08-21T08:15:49.283Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 23
+    },
+    {
+      "timestamp": "2024-08-21T08:21:59.585Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 24
+    },
+    {
+      "timestamp": "2024-08-21T08:22:06.799Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 25
+    },
+    {
+      "timestamp": "2024-08-21T10:14:37.940Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 26
+    },
+    {
+      "timestamp": "2024-08-21T10:44:36.329Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 27
+    },
+    {
+      "timestamp": "2024-08-21T10:44:52.733Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 28
+    },
+    {
+      "timestamp": "2024-08-21T10:45:51.560Z",
+      "action": "User logged in",
+      "userId": 17,
+      "id": 29
+    },
+    {
+      "timestamp": "2024-08-21T11:47:10.068Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 30
+    },
+    {
+      "timestamp": "2024-08-22T05:35:49.169Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 31
+    },
+    {
+      "timestamp": "2024-08-22T06:26:01.814Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 32
+    },
+    {
+      "timestamp": "2024-08-22T06:26:17.298Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 33
+    },
+    {
+      "timestamp": "2024-08-22T06:37:07.393Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 34
+    },
+    {
+      "timestamp": "2024-08-22T06:37:33.829Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 35
+    },
+    {
+      "timestamp": "2024-08-22T10:32:39.203Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 36
+    },
+    {
+      "timestamp": "2024-08-22T10:35:58.108Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 37
+    },
+    {
+      "timestamp": "2024-08-22T10:36:11.122Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 38
+    },
+    {
+      "timestamp": "2024-08-22T10:50:06.541Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 39
+    },
+    {
+      "timestamp": "2024-08-22T10:50:55.709Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 40
+    },
+    {
+      "timestamp": "2024-08-22T13:02:58.544Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 41
+    },
+    {
+      "timestamp": "2024-08-22T15:27:49.452Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 42
+    },
+    {
+      "timestamp": "2024-08-23T06:56:53.440Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 43
+    },
+    {
+      "timestamp": "2024-08-23T08:43:17.051Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 44
+    },
+    {
+      "timestamp": "2024-08-23T08:52:48.442Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 45
+    },
+    {
+      "timestamp": "2024-08-23T08:52:58.474Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 46
+    },
+    {
+      "timestamp": "2024-08-23T10:25:37.632Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 47
+    },
+    {
+      "timestamp": "2024-08-23T11:27:54.856Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 48
+    },
+    {
+      "timestamp": "2024-08-23T11:56:47.826Z",
+      "action": "User logged out",
+      "userId": 12,
+      "id": 49
+    },
+    {
+      "timestamp": "2024-08-23T11:57:06.553Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 50
+    },
+    {
+      "timestamp": "2024-08-23T12:22:55.861Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 51
+    },
+    {
+      "timestamp": "2024-08-26T05:29:03.463Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 52
+    },
+    {
+      "timestamp": "2024-08-26T05:29:14.679Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 53
+    },
+    {
+      "timestamp": "2024-08-26T05:44:28.592Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 54
+    },
+    {
+      "timestamp": "2024-08-26T06:01:03.645Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 55
+    },
+    {
+      "timestamp": "2024-08-26T06:30:10.207Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 56
+    },
+    {
+      "timestamp": "2024-08-26T07:02:26.173Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 57
+    },
+    {
+      "timestamp": "2024-08-26T07:15:00.105Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 58
+    },
+    {
+      "timestamp": "2024-08-26T07:19:05.390Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 59
+    },
+    {
+      "timestamp": "2024-08-26T07:31:16.718Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 60
+    },
+    {
+      "timestamp": "2024-08-26T09:42:56.872Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 61
+    },
+    {
+      "timestamp": "2024-08-26T09:43:14.287Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 62
+    },
+    {
+      "timestamp": "2024-08-26T10:02:58.144Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 63
+    },
+    {
+      "timestamp": "2024-08-26T10:10:15.535Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 64
+    },
+    {
+      "timestamp": "2024-08-27T11:06:17.501Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 65
+    },
+    {
+      "timestamp": "2024-08-27T12:29:05.266Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 66
+    },
+    {
+      "timestamp": "2024-08-27T12:34:00.863Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 67
+    },
+    {
+      "timestamp": "2024-08-28T10:20:36.192Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 68
+    },
+    {
+      "timestamp": "2024-08-28T10:30:47.932Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 69
+    },
+    {
+      "timestamp": "2024-08-28T11:58:55.961Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 70
+    },
+    {
+      "timestamp": "2024-08-28T12:15:57.445Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 71
+    },
+    {
+      "timestamp": "2024-08-28T12:33:27.567Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 72
+    },
+    {
+      "timestamp": "2024-08-29T06:16:45.899Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 73
+    },
+    {
+      "timestamp": "2024-08-29T06:20:04.076Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 74
+    },
+    {
+      "timestamp": "2024-08-30T11:07:32.003Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 75
+    },
+    {
+      "timestamp": "2024-09-02T05:53:10.511Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 76
+    },
+    {
+      "timestamp": "2024-09-02T05:53:25.547Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 77
+    },
+    {
+      "timestamp": "2024-09-02T07:39:30.115Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 78
+    },
+    {
+      "timestamp": "2024-09-02T07:57:04.988Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 79
+    },
+    {
+      "timestamp": "2024-09-02T09:04:55.205Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 80
+    },
+    {
+      "timestamp": "2024-09-02T09:17:43.044Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 81
+    },
+    {
+      "timestamp": "2024-09-02T09:19:02.415Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 82
+    },
+    {
+      "timestamp": "2024-09-02T09:29:17.794Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 83
+    },
+    {
+      "timestamp": "2024-09-02T09:44:12.711Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 84
+    },
+    {
+      "timestamp": "2024-09-02T10:07:38.733Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 85
+    }
+  ],
+  "tickets": [
+    {
+      "title": "login issue",
+      "description": "Unable to login .",
+      "status": "Closed",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-08-16T11:40:01.329Z",
+      "id": 2,
+      "messages": [
+        {
+          "sender": "komal",
+          "text": "Hi",
+          "timestamp": "2024-08-16T11:40:22.055Z"
+        },
+        {
+          "sender": "pankaj",
+          "text": "helo",
+          "timestamp": "2024-08-16T11:40:28.155Z"
+        },
+        {
+          "sender": "pankaj",
+          "text": "hii",
+          "timestamp": "2024-08-19T09:02:07.297Z"
+        },
+        {
+          "sender": "pankaj",
+          "text": "hrello",
+          "timestamp": "2024-08-19T09:52:35.425Z"
+        },
+        {
+          "sender": "komal",
+          "text": "hreloadasf",
+          "timestamp": "2024-08-19T09:53:04.904Z"
+        }
+      ]
+    },
+    {
+      "title": "Leave issue",
+      "description": "facing issue while applying leave",
+      "status": "In Progress",
+      "userId": 17,
+      "username": "Medha",
+      "createdAt": "2024-08-16T12:13:31.310Z",
+      "id": 3,
+      "messages": [
+        {
+          "sender": "pankaj",
+          "text": "hi",
+          "timestamp": "2024-08-21T10:45:40.239Z"
+        }
+      ]
+    },
+    {
+      "title": "regularization issue ",
+      "description": "facing issue while regularization",
+      "status": "Closed",
+      "userId": 17,
+      "username": "Medha",
+      "createdAt": "2024-08-16T12:17:56.301Z",
+      "id": 4,
+      "messages": [
+        {
+          "sender": "pankaj",
+          "text": "Hi",
+          "timestamp": "2024-08-16T12:18:23.851Z"
+        },
+        {
+          "sender": "pankaj",
+          "text": "hi",
+          "timestamp": "2024-08-16T12:18:38.799Z"
+        },
+        {
+          "sender": "Medha",
+          "text": "hello",
+          "timestamp": "2024-08-16T12:19:44.491Z"
+        }
+      ]
+    },
+    {
+      "title": "logout issue",
+      "description": "Unable to logout .",
+      "status": "Open",
+      "userId": 17,
+      "username": "Medha",
+      "createdAt": "2024-08-19T05:34:27.116Z",
+      "id": 5,
+      "messages": [
+        {
+          "sender": "pankaj",
+          "text": "hi",
+          "timestamp": "2024-08-19T05:41:22.743Z"
+        },
+        {
+          "sender": "Medha",
+          "text": "hello",
+          "timestamp": "2024-08-19T05:41:28.463Z"
+        },
+        {
+          "sender": "pankaj",
+          "text": "hifidsfisdif",
+          "timestamp": "2024-08-20T05:38:10.408Z"
+        }
+      ]
+    },
+    {
+      "title": "forms issue",
+      "description": "unable to edit in  form",
+      "status": "Closed",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-08-19T08:43:13.840Z",
+      "id": 6,
+      "messages": [
+        {
+          "sender": "komal",
+          "text": "Hi",
+          "timestamp": "2024-08-19T08:43:23.368Z"
+        },
+        {
+          "sender": "pankaj",
+          "text": "hello",
+          "timestamp": "2024-08-19T08:43:33.812Z"
+        }
+      ]
+    },
+    {
+      "title": "Regularization Issue",
+      "description": "Facing issue while regularize the attendance ",
+      "status": "Cancelled",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-02T08:02:22.237Z",
+      "id": 7,
+      "statusUpdatedAt": "2024-09-02T08:07:11.382Z",
+      "messages": [
+        {
+          "sender": "komal",
+          "text": "Hi Admin",
+          "timestamp": "2024-09-02T08:07:32.840Z"
+        }
+      ]
+    }
+  ]
+}

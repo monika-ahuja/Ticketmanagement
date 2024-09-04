@@ -1,0 +1,39 @@
+<p>Admin ticket works!</p>
+  <div class="container mt-5">
+    <button class="btn btn-secondary mb-3" (click)="goBack()">Back</button>
+    
+      <h2>Tickets for User {{ selectedUserId }} </h2>
+      <table class="table table-bordered mt-4">
+        <thead>
+          <tr>
+            <th>Ticket ID</th>
+            <th>Title</th>
+            <th>CreatedBy</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of tickets">
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.title }}</td>
+            <td>{{ticket.username}}</td>
+            <td [ngClass]="{
+              'status-open': ticket.status === 'Open',
+              'status-inprogress': ticket.status === 'In Progress',
+              'status-escalated': ticket.status === 'Escalated',
+              'status-closed': ticket.status === 'Closed',
+              'status-cancelled': ticket.status === 'Cancelled'
+             }">
+             {{ ticket.status }}
+          </td>
+            <td>
+              <button (click)="viewTicketDetails(ticket.id)" class="btn btn-primary" [disabled]="ticket.status === 'Cancelled'">View Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  
+  

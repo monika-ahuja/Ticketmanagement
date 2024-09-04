@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>New Request</h2>
+<mat-dialog-content>
+  <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+    <mat-form-field style="display: block; width: 100%;">
+      <input matInput placeholder="Title" formControlName="title">
+      <mat-error *ngIf="ticketForm.controls['title'].hasError('required')">
+        Title is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field style="display: block; width: 100%;">
+      <textarea matInput placeholder="Description" formControlName="description"></textarea>
+      <mat-error *ngIf="ticketForm.controls['description'].hasError('required')">
+        Description is required
+      </mat-error>
+    </mat-form-field>
+
+    <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px;">
+      <button mat-raised-button color="primary" type="submit" [disabled]="ticketForm.invalid">Submit</button>
+      <button mat-raised-button color="warn" type="button" (click)="onClose()">Close</button>
+    </div>
+  </form>
+</mat-dialog-content>
+

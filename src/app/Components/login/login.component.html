@@ -1,0 +1,60 @@
+<!-- <div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2>Login</h2>
+      <form (ngSubmit)="login()" class="mt-4">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" [(ngModel)]="email" placeholder="Enter email" name="email" required [ngModelOptions]="{standalone: true}">
+          <div *ngIf="isFieldInvalid('email')" class="text-danger mt-2">Email is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" [(ngModel)]="password" placeholder="Enter password" name="password" required [ngModelOptions]="{standalone: true}">
+          <div *ngIf="isFieldInvalid('password')" class="text-danger mt-2">Password is required.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div *ngIf="error" class="text-danger mt-2">{{ error }}</div>
+        <div class="text-right">
+          <span>Register here?</span>
+          <a routerLink="/register" class="btn btn-link">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- Reactive forms * -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2>Login</h2>
+      <form (ngSubmit)="login()" class="mt-4" [formGroup]="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" formControlName="email" placeholder="Enter email">
+          <div *ngIf="isFieldInvalid('email')" class="text-danger mt-2">Email is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" formControlName="password" placeholder="Enter password">
+          <div *ngIf="isFieldInvalid('password')" class="text-danger mt-2">
+            Password is required.
+            <!-- Password must be at least 5 characters long and include at least one uppercase letter, one lowercase letter, one digit, and one special character. -->
+          </div>
+        </div>
+        <br>
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      <!-- SANITIZE INPUT DATA APAROACH -->
+        <div *ngIf="error" class="text-danger mt-2">{{ error }}</div>
+        <div class="text-right">
+          <span>Register here?</span>
+          <a routerLink="/register" class="btn btn-link">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

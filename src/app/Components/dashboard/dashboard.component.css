@@ -1,0 +1,73 @@
+/* styles.css or custom styles */
+.bg-light {
+    background-color: cyan !important;
+  };
+
+  /* .h2 {
+    color:brown;
+  } */
+  h2 {
+    font-size: calc(1.325rem + .9vw);
+    color:rgb(72, 149, 179);
+}
+
+
+/* new ticket button css */
+/* .row justify-content-end mt-5{
+margin-top:-179px  !important ;  
+margin-right:-28px   !important; 
+} */
+
+/* .new-ticket-button,
+.view-ticket-button {
+  margin-top: -220px; /* Adjust this value to your desired spacing */
+/* } */ */
+
+/* Your component CSS file */
+.new-ticket-button  {
+  margin-top: 0; /* Ensures buttons are aligned properly */
+}
+
+
+/* .mat-raised-button{
+  margin-top:-228px !important;
+} */
+
+
+
+
+  /* styles.css or custom styles */
+/* .navbar {
+    /* padding: 10px 20px; /* Adjust padding as needed */
+  /* } */
+  
+  /* .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav h2 { */ 
+    /* margin: 0; Remove margin from the heading */
+  /* }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px; Adjust right margin between elements
+  }
+  
+  .btn-outline-danger {
+    margin-left: 10px; /* Adjust left margin for the logout button */
+  /* } */ 
+
+  .avatar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    }
+
+  

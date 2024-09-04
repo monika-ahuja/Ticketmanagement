@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:cyan; color: blue;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" *ngIf="currentUser?.role === 'admin'">
+            <a class="nav-link" routerLink="/admin">Admin</a>
+          </li>
+          <li class="nav-item" *ngIf="currentUser?.role === 'admin'">
+            <a class="nav-link" routerLink="/admin/users">Users</a>
+          </li>
+          <li class="nav-item" *ngIf="currentUser?.role === 'admin'">
+            <a class="nav-link" routerLink="/admin/audit-logs">Logs</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item d-flex align-items-center">
+            <span class="avatar" *ngIf="currentUser">{{ getAvatarText(currentUser.username) }}</span>
+            <button class="btn btn-outline-danger ms-2" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

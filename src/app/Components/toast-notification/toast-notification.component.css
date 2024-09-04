@@ -1,0 +1,27 @@
+/* toast-notification.component.css */
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+  
+  .toast {
+    width: 300px;
+    background-color: #4CAF50; /* Green background color */
+    color: #FFFFFF; /* White text color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-close {
+    color: #FFFFFF; /* White close button color */
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  

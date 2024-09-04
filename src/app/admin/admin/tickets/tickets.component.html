@@ -1,0 +1,72 @@
+<p>get all tickets</p>
+<div class="table-container">
+  <div class="filters-container">
+<div>
+  <label for="statusFilter">Filter by Status:</label>
+  <select id="statusFilter" (change)="onStatusChange($event)">
+    <option value="All">All</option>
+    <option value="Open" selected>Open</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Escalated">Escalated</option>
+    <option value="Closed">Closed</option>
+  </select>
+</div>
+
+<div>
+  <label for="usernameFilter">Filter by Username:</label>
+  <input type="text" id="usernameFilter" (input)="onUsernameChange($event)" placeholder="Search by username" />
+</div>
+<div>
+  <label for="startDate">Start Date:</label>
+  <input id="startDate" type="date" (change)="onStartDateChange($event)">
+</div>
+
+<div>
+  <label for="endDate">End Date:</label>
+  <input id="endDate" type="date" (change)="onEndDateChange($event)">
+</div>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Ticket_ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>User Name</th>
+        <th>Status</th>
+        <th>Created date</th>
+       <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of filteredTickets">
+        <td>{{ ticket.id}}</td>
+        <td>{{ ticket.title }}</td>
+        <td>{{ ticket.description }}</td>
+        <td>{{ ticket.username }}</td>
+         <!-- <td>{{ ticket.status }}</td> -->
+         <td [ngClass]="{
+          'status-open': ticket.status === 'Open',
+          'status-inprogress': ticket.status === 'In Progress',
+          'status-escalated': ticket.status === 'Escalated',
+          'status-closed': ticket.status === 'Closed'
+         }">
+         {{ ticket.status }}
+      </td>
+      <td>{{ticket.createdAt |date:'medium' }}</td>
+      <td>
+
+     <!-- Only show the button if the ticket is Open -->
+     <!-- [routerLink]="['/home/tickets/ticket-details', ticket.id]" -->
+     <button   class="btn btn-primary manage-button" *ngIf="ticket.status === 'Open' || ticket.status==='In Progress' || ticket.status==='Escalated' || ticket.status==='Cancelled'" (click)="navigateToTicketDetails(ticket.id)" >
+     Manage
+    </button>
+    <button  class="btn btn-primary manage-button" *ngIf="ticket.status === 'Closed'"(click)="navigateToTicketDetails(ticket.id)">
+      View Details
+     </button>
+    </td>
+      </tr>
+    </tbody>
+  </table> 
+</div>

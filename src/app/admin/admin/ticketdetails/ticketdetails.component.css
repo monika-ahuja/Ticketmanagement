@@ -1,0 +1,38 @@
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; Optional: Add space between messages */
+  }
+  
+  .message-content {
+    flex: 1; /* Take up the remaining space */
+    margin-right: 20px; /* Space between the message and the timestamp */
+    word-wrap: break-word; /* Prevent overflow of long messages */
+  }
+  
+  .timestamp {
+    white-space: nowrap; /* Prevent the timestamp from wrapping */
+    font-size: 0.9em;  /* Optional: make the timestamp text slightly smaller */
+    color: #666;      /* Optional: color the timestamp for better contrast */
+  }
+
+
+  .message-textarea {
+    width: 100%;      /* Adjust the width to take full available space */
+    height: 100px;    /* Adjust the height to your preference */
+    padding: 10px;    /* Add padding for better readability */
+    font-size: 1em;   /* Adjust font size if necessary */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+
+  .alert-sm 
+{
+  padding: 8px 20px; /* Reduce padding */
+  font-size: 20px;   /* Smaller font size */
+  margin-top: 10px;  /* Adjust margin */
+  border-radius: 90px; /* Smaller border radius */
+
+}  
+  
+  

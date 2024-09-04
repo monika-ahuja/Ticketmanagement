@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* .mat-dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  /* .new-ticket-button {
+    margin-top: -220px; /* Adjust this value to your desired spacing */
+    /* margin-right:-79px;
+  } */ 
+  
+  

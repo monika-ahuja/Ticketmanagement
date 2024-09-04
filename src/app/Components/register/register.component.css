@@ -1,0 +1,57 @@
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+/* register.component.css]
+
+
+
+
+h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+  
+
+
+  .toast-container {
+    position: fixed;
+    top: 20px; /* Adjust this value to change the vertical position */
+    /* left: 50%; /* Center horizontally */
+    /* transform: translateX(-50%);
+    width: 300px; /* Set the width of the toast */
+    /* z-index: 1000; /* Ensure the toast appears above other elements */
+  /* } 
+  
+  .toast {
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: #5cb85c; /* Green background color */
+    /* color: #fff; /* White text color */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  } */
+  
+  /* .toast button.btn-close {
+    position: absolute;
+    top: 50%; */ 
+    /* right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+  } */
