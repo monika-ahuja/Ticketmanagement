@@ -24,9 +24,37 @@
   </p>
   <p><strong>Created_Date:</strong> {{ ticket.createdAt |  date:'short'}}
   </p>
- <p><strong>Updated_Date:</strong>
+ <!-- <p><strong>Updated_Date:</strong>
   {{ ticket.statusUpdatedAt |  date:'short' }}
+  </p> -->
+   <!-- Replace Updated_Date with View History button -->
+   <p>
+    <button class="btn custom-button" (click)="toggleHistory()">View History</button>
   </p>
+
+  <!-- Collapsible card for Status History -->
+  <div *ngIf="showHistory" class="card mt-3">
+    <div class="card-header">
+      <h5>Status History</h5>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let history of ticket.statusHistory">
+            <td>{{ history.status }}</td>
+            <td>{{ history.timestamp | date:'short' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
   <hr>
   <label for="status" ><b>Update Status:</b></label>&nbsp;

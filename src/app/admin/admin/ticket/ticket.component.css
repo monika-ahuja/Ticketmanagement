@@ -63,10 +63,10 @@
   }
 
   .status-cancelled {  /* New style for cancelled tickets */
-    background-color: #f3f309;
-    color: #6c757d;
+    color: #c7be12;
     font-size:medium;
     font-weight: bold;
+    font-size:18px;
     text-decoration: line-through;
   }
 

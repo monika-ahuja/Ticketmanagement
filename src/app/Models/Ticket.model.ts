@@ -1,3 +1,9 @@
+export interface StatusHistory {
+  status: string;
+  timestamp: any;
+}
+
+
 export interface Ticket {
     //messages: never[];
     id?: number;
@@ -8,7 +14,8 @@ export interface Ticket {
     createdAt:Date;
     username?:string;
     statusUpdatedAt?: Date;
-    messages: Message[];  
+    messages: Message[];
+    statusHistory?: StatusHistory[];  // New field for status history  
   }
 
   export interface Message {

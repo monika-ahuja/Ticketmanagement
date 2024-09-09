@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { TicketService } from 'src/app/services/ticket.service';
 import { Location } from '@angular/common';
@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { Ticket } from 'src/app/Models/Ticket.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { Tooltip } from 'bootstrap';
 
 @Component({
   selector: 'app-ticketlist',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
   styleUrl: './ticketlist.component.css'
 })
 
-export class TicketlistComponent {
+export class TicketlistComponent implements AfterViewInit {
 
   tickets: any[] = [];
   filteredTickets: any[] = [];
@@ -37,7 +38,19 @@ export class TicketlistComponent {
         console.log('ticketslist dashboard',this.tickets)
       });
     }
+     // Initialize Bootstrap tooltips
+     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    //  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    //    return new Tooltip(tooltipTriggerEl);
+    //  });
     //this.fetchTickets();
+  }
+
+  ngAfterViewInit(): void {
+    const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(tooltipTriggerEl => {
+      new Tooltip(tooltipTriggerEl);
+    });
   }
 
 

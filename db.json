@@ -543,6 +543,66 @@
       "action": "User logged out",
       "userId": 15,
       "id": 85
+    },
+    {
+      "timestamp": "2024-09-06T07:14:06.567Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 86
+    },
+    {
+      "timestamp": "2024-09-06T07:14:34.955Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 87
+    },
+    {
+      "timestamp": "2024-09-06T10:49:37.054Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 88
+    },
+    {
+      "timestamp": "2024-09-06T11:50:44.451Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 89
+    },
+    {
+      "timestamp": "2024-09-06T12:27:36.265Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 90
+    },
+    {
+      "timestamp": "2024-09-06T12:27:50.649Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 91
+    },
+    {
+      "timestamp": "2024-09-06T12:37:17.204Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 92
+    },
+    {
+      "timestamp": "2024-09-07T05:16:59.995Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 93
+    },
+    {
+      "timestamp": "2024-09-07T05:22:09.177Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 94
+    },
+    {
+      "timestamp": "2024-09-09T05:30:00.363Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 95
     }
   ],
   "tickets": [
@@ -685,6 +745,43 @@
           "sender": "komal",
           "text": "Hi Admin",
           "timestamp": "2024-09-02T08:07:32.840Z"
+        }
+      ]
+    },
+    {
+      "title": "toady ",
+      "description": "today ticket\n",
+      "status": "Cancelled",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-06T11:11:09.305Z",
+      "id": 8
+    },
+    {
+      "title": "nasmdnsanf",
+      "description": "sfsdfsdfsda",
+      "status": "In Progress",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-06T12:37:25.617Z",
+      "id": 9,
+      "statusUpdatedAt": "2024-09-06T12:55:43.539Z",
+      "statusHistory": [
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-06T12:54:45.437Z"
+        },
+        {
+          "status": "Escalated",
+          "timestamp": "2024-09-06T12:54:51.361Z"
+        },
+        {
+          "status": "Open",
+          "timestamp": "2024-09-06T12:54:54.264Z"
+        },
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-06T12:55:43.539Z"
         }
       ]
     }

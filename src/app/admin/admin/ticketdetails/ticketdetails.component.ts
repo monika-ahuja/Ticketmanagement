@@ -25,7 +25,7 @@ export class TicketdetailsComponent {
   currentUser: any;
   selectedUserId!: number;
   userId!: any;
-
+  showHistory = false;  // To toggle the history table visibility
   fromPage!: any;
   constructor(
     private ticketService: TicketService,
@@ -137,15 +137,43 @@ this.toastr.success("Message add successfully")
     }
   }
 
+  // updateStatus(event: any): void {
+  //   const newStatus = event.target.value;
+  //   if (this.ticketId && newStatus !== this.ticket.status) {
+  //     this.ticketService.updateStatus(this.ticketId, newStatus).subscribe(
+  //       () => {
+  //         this.ticket.status = newStatus;
+  //         this.newStatus = newStatus; // Update newStatus with the new status
+
+
+  //       },
+  //       error => {
+  //         console.error('Error updating status:', error);
+  //       }
+  //     );
+  //   }
+  // }
+
+
   updateStatus(event: any): void {
     const newStatus = event.target.value;
+    const timestamp = new Date(); // Current timestamp
+  
     if (this.ticketId && newStatus !== this.ticket.status) {
+      const updatedStatus = {
+        status: newStatus,
+        timestamp: timestamp
+      };
+  
+      // Update status and status history
       this.ticketService.updateStatus(this.ticketId, newStatus).subscribe(
         () => {
           this.ticket.status = newStatus;
-          this.newStatus = newStatus; // Update newStatus with the new status
-
-
+          this.newStatus = newStatus;
+          this.ticket.statusHistory = this.ticket.statusHistory || [];
+          this.ticket.statusHistory.push(updatedStatus); // Add new status to the history
+  
+          console.log('Status history updated:', this.ticket.statusHistory);
         },
         error => {
           console.error('Error updating status:', error);
@@ -154,6 +182,11 @@ this.toastr.success("Message add successfully")
     }
   }
 
+
+  toggleHistory() {
+    this.showHistory = !this.showHistory;
+  }
+  
   ngOnDestroy(): void {
     if (this.messageSubscription) {
       this.messageSubscription.unsubscribe();

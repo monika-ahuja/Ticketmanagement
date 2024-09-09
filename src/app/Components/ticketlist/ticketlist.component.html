@@ -1,9 +1,9 @@
-<div class="container mt-3">
+<!-- <div class="container mt-3">
   <button class="btn btn-secondary mb-3" (click)="goBack()">Back</button>
   <h2 align="center">Your User Tickets</h2>
 
     <!-- Filters Section -->
-    <div class="row mb-3">
+    <!-- <div class="row mb-3">
       <div class="col-md-6">
         <label for="titleFilter" class="form-label">Filter by Title:</label>
         <input
@@ -63,20 +63,14 @@
             Cancelled
           </button> 
 
-            <!-- Show View Details button if status is Closed -->
-            <!-- <button
-              *ngIf="ticket.status === 'Closed'||ticket.status === 'In Progress' || ticket.status === 'Escalated' ||ticket.status === 'Open' "
-              class="btn btn-info"
-              [routerLink]="['/ticket-list', ticket.id]"
-            >
-              View Details
-            </button> -->
+           
             <button
             *ngIf="ticket.status === 'Closed'"            
-            class="btn btn-info"
+            class="btn btn-info view-details-btn"
             [routerLink]="['/ticket-list', ticket.id]"
           >
-            View Details
+          <i class="bi bi-eye"></i>
+          <span class="btn-text">View Details</span>
           </button>
           </td>
         </tr>
@@ -86,6 +80,121 @@
   <ng-template #noTickets>
     <h3 class="ticket" align="center">No tickets yet.</h3>
   </ng-template>
-</div>
+</div> -->
 
+
+
+
+<app-navbar></app-navbar>
+   <div class="container mt-3">
+    <!-- <button class="btn btn-secondary mb-3" (click)="goBack()"> -->
+      <span (click)="goBack()">
+        <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
+      <!-- <i class="bi bi-arrow-left"></i> Back</span> -->
+    <h2 align="center">Your User Tickets</h2>
+  
+    <!-- Filters Section -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="titleFilter" class="form-label">Filter by Title:</label>
+        <input
+          id="titleFilter"
+          type="text"
+          (input)="onTitleFilterChange($event)"
+          placeholder="Search by title"
+          class="form-control"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="statusFilter" class="form-label">Filter by Status:</label>
+        <select
+          id="statusFilter"
+          (change)="onStatusFilterChange($event)"
+          class="form-control"
+        >
+          <option value="All">All</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Escalated">Escalated</option>
+          <option value="Closed">Closed</option>
+        </select>
+      </div>
+    </div>
+  
+    <ng-container *ngIf="filteredTickets.length > 0; else noTickets">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>TicketID</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of filteredTickets">
+            <td class="text-center">
+              <a [routerLink]="['/ticket-list', ticket.id]">TD-{{ ticket.id }}</a>
+            </td>
+            <td>
+              <a [routerLink]="['/ticket-list', ticket.id]">{{ ticket.title }}</a>
+            </td>
+            <td [ngClass]="{
+              'status-open': ticket.status === 'Open',
+              'status-inprogress': ticket.status === 'In Progress',
+              'status-escalated': ticket.status === 'Escalated',
+              'status-closed': ticket.status === 'Closed',
+              'status-cancelled': ticket.status === 'Cancelled'
+             }">{{ ticket.status }}</td>
+            <td>
+              <!-- <button
+                *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
+                class="btn btn-danger"
+                (click)="cancelTicket(ticket.id)"
+              > -->
+              <span  *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
+              class="btn btn-danger icon-button"
+            
+              (click)="cancelTicket(ticket.id)">
+              <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancel -->
+            </span>
+              <!-- </button> -->
+              <!-- <button *ngIf="ticket.status === 'Cancelled'" class="btn btn-secondary" disabled>
+                <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancelled -->
+                <!-- Cancelled
+              </button> --> 
+              <!-- <span *ngIf="ticket.status === 'Cancelled'" class="btn btn-secondary icon-button" disabled>
+                <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancelled -->
+              <!-- </span> --> 
+
+              <span *ngIf="ticket.status === 'Cancelled'" class="view-details-icon" 
+              data-bs-toggle="tooltip"
+              [routerLink]="['/ticket-list', ticket.id]">
+                <i class="bi bi-eye"></i>
+              </span>
+  
+              <!-- View Details button with Bootstrap icon -->
+              <!-- <button
+                *ngIf="ticket.status === 'Closed'"
+                class="btn view-details-btn"
+                [routerLink]="['/ticket-list', ticket.id]"
+              >
+                <i class="bi bi-eye"></i>
+                <span class="btn-text">View Details</span>
+              </button> -->
+                 <!-- Icon for View Details without button styling -->
+            <span *ngIf="ticket.status === 'Closed'" class="view-details-icon" 
+            data-bs-toggle="tooltip"
+            [routerLink]="['/ticket-list', ticket.id]">
+              <i class="bi bi-eye"></i>
+            </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+    <ng-template #noTickets>
+      <h3 class="ticket" align="center">No tickets yet.</h3>
+    </ng-template>
+  </div>
   

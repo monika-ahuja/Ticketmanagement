@@ -1,10 +1,14 @@
-<p>ticketdetail works!!!!</p>
+<app-navbar></app-navbar>
 <!-- ticket-detail.component.html -->
 <div *ngIf="statusUpdateMessage" class="alert alert-info">
   {{ statusUpdateMessage }}
 </div>
 <div class="container mt-3">
-  <button class="btn btn-secondary mb-3" routerLink="/ticket-list">Back</button>
+  <span  routerLink="/ticket-list">
+    <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i>
+  </span>
+ 
+  <!-- <button class="btn btn-secondary mb-3" routerLink="/ticket-list">Back</button> -->
   <div *ngIf="ticket">
     <h2 align="center">Ticket Details</h2>
     <table class="table table-bordered">
