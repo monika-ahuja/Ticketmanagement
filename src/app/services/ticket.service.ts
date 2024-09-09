@@ -95,11 +95,35 @@ export class TicketService {
   }
 
 
-  
+  ///working for statsus 6-9-02024
+  // updateStatus(ticketId: number, status: string): Observable<any> {
+  //   const updatedAt = new Date().toISOString();  // Current timestamp
+  //   return this.http.patch<any>(`${this.apiUrl}/tickets/${ticketId}`, { status ,statusUpdatedAt: updatedAt});
+  // }
+
   updateStatus(ticketId: number, status: string): Observable<any> {
     const updatedAt = new Date().toISOString();  // Current timestamp
-    return this.http.patch<any>(`${this.apiUrl}/tickets/${ticketId}`, { status ,statusUpdatedAt: updatedAt});
+  
+    // First, get the ticket details
+    return this.http.get<Ticket>(`${this.apiUrl}/tickets/${ticketId}`).pipe(
+      switchMap(ticket => {
+        // Append the new status and timestamp to the existing statusHistory array
+        const statusHistory = ticket.statusHistory || [];  // Ensure history is initialized
+        statusHistory.push({
+          status: status,
+          timestamp: updatedAt
+        });
+  
+        // Update the ticket with the new status and status history
+        return this.http.patch<any>(`${this.apiUrl}/tickets/${ticketId}`, {
+          status: status,
+          statusUpdatedAt: updatedAt,
+          statusHistory: statusHistory
+        });
+      })
+    );
   }
+  
    // Fetch ticket details
    getTicketById(id: number): Observable<Ticket> {
     return this.http.get<Ticket>(`${this.apiUrl1}/${id}`);

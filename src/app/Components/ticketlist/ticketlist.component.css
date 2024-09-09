@@ -9,15 +9,161 @@
     text-align: center;
   }
 
-
-  /* ticket-list.component.css */
-/* .table th, .table td {
-    vertical-align: middle;
-    text-align: center;
+  .status-open {
+    color: green;
+    font-weight: bold;
+    font-size:18px
   }
   
-  a {
-    text-decoration: none;
-    color: inherit;
-  } */
+  .status-inprogress {
+    color: blue;
+    font-weight: bold;
+    font-size:18px
+  }
+  
+  .status-escalated {
+    color: orange;
+    font-weight: bold;
+    font-size:18px
+  }
+  
+  .status-closed {
+    color: red;
+    font-weight: bold;
+    font-size:18px
+  }
+
+  .status-cancelled {  /* New style for cancelled tickets */
+    /* background-color: #f3f309; */
+    color: rgb(233, 233, 10);
+    font-size:medium;
+    font-weight: bold;
+    font-size:18px;
+    text-decoration: line-through;
+  }
+
+
+
+
+  /* .view-details-btn {
+    position: relative;
+  }
+  
+  .view-details-btn .btn-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
+  
+  .view-details-btn:hover .btn-text {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    left: 40px; /* Adjust the position based on icon size */
+    /* top: 0;
+  }
+  
+  /* Optional: Style the icon */
+  /* .view-details-btn i {
+    margin-right: 5px;
+  } */ */
+   */
+
+   .view-details-btn {
+    position: relative;
+    background-color: #007bff; /* Set button background color */
+    color: white; /* Ensure text and icon are white */
+    border: none; /* Remove border if desired */
+    padding: 8px 12px; /* Add padding to the button */
+    display: inline-flex; /* Ensure button behaves like inline-flex for icon + text */
+    align-items: center; /* Center icon and text vertically */
+}
+
+/* Optional: Adjust icon size and margins */
+.view-details-btn i {
+    margin-right: 5px;
+    font-size: 16px; /* Adjust icon size */
+    color: white; /* Ensure icon is white */
+}
+
+/* Initially hide the text 'View Details' */
+.view-details-btn .btn-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the text on hover */
+.view-details-btn:hover .btn-text {
+    visibility: visible;
+    opacity: 1;
+    margin-left: 5px; /* Smoothly appear next to the icon */
+}
+
+/* Button hover effect */
+.view-details-btn:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+}
+
+
+.view-details-icon {
+  cursor: pointer;
+  color: #007bff;
+  font-size: 1.5rem; /* Adjust icon size if necessary */
+  transition: color 0.3s ease;
+}
+
+.view-details-icon:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
+/* Optional: Show a tooltip when hovering over the icon */
+.view-details-icon::after {
+  content: 'View Details'; /* Tooltip text */
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  bottom: 100%; /* Position the tooltip above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.view-details-icon:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.icon-button {
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
+  padding: 0; /* Remove button padding */
+  cursor: pointer; /* Default cursor */
+}
+
+.icon-button:disabled {
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  opacity: 0.5; /* Reduce opacity for disabled state */
+  color: #6c757d; /* Change color to indicate disabled state */
+}
+
+.icon-button .bi {
+  font-size: 1.5rem; /* Adjust icon size as needed */
+}
+
+/* Optional: Add specific color for enabled state if needed */
+.btn-danger.icon-button .bi {
+  color: #dc3545; /* Red color for Cancel icon */
+}
+
+.btn-secondary.icon-button .bi {
+  color: #6c757d; /* Gray color for Cancelled icon */
+}
+
   

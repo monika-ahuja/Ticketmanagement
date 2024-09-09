@@ -35,4 +35,15 @@
 
 }  
   
+
+.btn custom-button{
+  color:blue;
+  font-size: 18px;
+  color: rgb(196, 21, 21);  /* Change text color */
+  background-color: #0371e7;  /* Change button background color */
+
+}
+
+
+
   
