@@ -33,5 +33,16 @@
               </div>
             </div>
           </nav>
+          <!-- Conditionally show the greeting message only on the home page -->
+  <div *ngIf="isHomePage">
+    <h4 style="padding-left: 10px;">
+      {{ greetingMessage }},
+      <span> {{ capitalizeUsername(currentUser.username) }}</span>
+    </h4>
+    <h1 style="color: rgb(255, 89, 0); text-align: center;">Welcome, Admin</h1>
+ <img src="assets/Ticket.png" alt="Description of Image" style="width: 1498px; height:600px;" /> 
+  </div>
+          
+
         <router-outlet></router-outlet>
       </div>

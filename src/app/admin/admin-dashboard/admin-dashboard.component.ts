@@ -13,6 +13,9 @@ export class AdminDashboardComponent {
   currentUser: any;
   users: any;
   tickets: any[] = [];
+  greetingMessage!: string;
+  isHomePage: boolean = false;
+
   constructor(private authService: AuthService,
     private route:Router,
     private toastr:ToastrService,
@@ -36,6 +39,12 @@ window.onpopstate = () => {
     this.currentUser = this.authService.getUser();
    // console.log('cureuser',this.currentUser)
     this.loadUsers();
+
+    this.greetingMessage = this.getGreeting();
+    this.route.events.subscribe(() => {
+      // Check if the current URL is '/home'
+      this.isHomePage = this.route.url === '/home';
+    });
   }
 
 
@@ -64,6 +73,25 @@ window.onpopstate = () => {
 
     this.authService.logout();
     console.log('logout')
+  }
+
+   // Method to determine greeting based on time
+   getGreeting(): string {
+    const currentHour = new Date().getHours();
+
+    if (currentHour < 12) {
+      return 'Good Morning';
+    } else if (currentHour >= 12 && currentHour < 18) {
+      return 'Good Afternoon';
+    } else {
+      return 'Good Evening';
+    }
+  }
+
+   // Method to capitalize the first letter of the username
+   capitalizeUsername(username: string): string {
+    if (!username) return '';
+    return username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
   }
 
   
