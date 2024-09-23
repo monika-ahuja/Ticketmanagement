@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import { Message } from 'src/app/Models/Ticket.model';
 import { AuthService } from 'src/app/services/auth.service';
@@ -23,11 +24,15 @@ export class TicketdetailComponent {
   statusUpdateMessage: string | null = null;
   private messageSubscription!: Subscription;
   private socketSubscription!: Subscription;
+  showHistory: any;
+  tickets: any[] = [];
+  filteredTickets: any[] = [];
 
   constructor(private route: ActivatedRoute, 
     private ticketService: TicketService,
     private authService: AuthService,
-    private webSocketService: WebSocketService
+    private webSocketService: WebSocketService,
+    private toastr:ToastrService
   ) { }
 
 
@@ -121,6 +126,30 @@ export class TicketdetailComponent {
       this.socketSubscription.unsubscribe();
     }
   }
+
+  toggleHistory() {
+    this.showHistory = !this.showHistory;
+  }
+
+  cancelTicket(ticketId: number): void {
+    this.ticketService.cancelTicket(ticketId).subscribe(() => {
+      this.tickets = this.tickets.map(ticket => 
+        ticket.id === ticketId ? { ...ticket, status: 'Cancelled' } : ticket
+      );
+      this.filteredTickets = this.filteredTickets.map(ticket => 
+        ticket.id === ticketId ? { ...ticket, status: 'Cancelled' } : ticket
+      );
+      this.ticket.status = 'Cancelled'; // Update current ticket status
+      // Show the toaster message on success
+      this.toastr.success('Ticket has been cancelled successfully!', 'Success');
+    }, error => {
+      // Show an error message if something goes wrong
+      this.toastr.error('Failed to cancel the ticket.', 'Error');
+  
+    });
+    
+  }
+  
 
 
 }

@@ -603,45 +603,171 @@
       "action": "User logged in",
       "userId": 12,
       "id": 95
+    },
+    {
+      "timestamp": "2024-09-11T05:57:33.240Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 96
+    },
+    {
+      "timestamp": "2024-09-11T05:57:40.546Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 97
+    },
+    {
+      "timestamp": "2024-09-11T06:07:34.036Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 98
+    },
+    {
+      "timestamp": "2024-09-14T05:21:36.151Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 99
+    },
+    {
+      "timestamp": "2024-09-14T05:29:59.478Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 100
+    },
+    {
+      "timestamp": "2024-09-14T06:21:50.069Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 101
+    },
+    {
+      "timestamp": "2024-09-16T05:27:57.658Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 102
+    },
+    {
+      "timestamp": "2024-09-16T05:28:09.409Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 103
+    },
+    {
+      "timestamp": "2024-09-16T06:28:24.926Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 104
+    },
+    {
+      "timestamp": "2024-09-16T06:28:54.743Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 105
+    },
+    {
+      "timestamp": "2024-09-16T06:43:22.377Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 106
+    },
+    {
+      "timestamp": "2024-09-16T07:35:12.798Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 107
+    },
+    {
+      "timestamp": "2024-09-16T07:42:26.438Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 108
+    },
+    {
+      "timestamp": "2024-09-16T09:29:17.676Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 109
+    },
+    {
+      "timestamp": "2024-09-16T09:29:25.775Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 110
+    },
+    {
+      "timestamp": "2024-09-16T09:39:19.359Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 111
+    },
+    {
+      "timestamp": "2024-09-16T09:46:32.038Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 112
+    },
+    {
+      "timestamp": "2024-09-16T09:59:23.891Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 113
+    },
+    {
+      "timestamp": "2024-09-16T10:06:50.916Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 114
+    },
+    {
+      "timestamp": "2024-09-18T07:01:25.231Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 115
+    },
+    {
+      "timestamp": "2024-09-18T07:01:48.524Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 116
+    },
+    {
+      "timestamp": "2024-09-20T07:01:09.005Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 117
+    },
+    {
+      "timestamp": "2024-09-20T07:18:32.866Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 118
+    },
+    {
+      "timestamp": "2024-09-23T05:25:34.262Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 119
+    },
+    {
+      "timestamp": "2024-09-23T05:26:45.770Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 120
+    },
+    {
+      "timestamp": "2024-09-23T05:36:55.848Z",
+      "action": "User logged out",
+      "userId": 15,
+      "id": 121
+    },
+    {
+      "timestamp": "2024-09-23T06:17:58.859Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 122
     }
   ],
   "tickets": [
-    {
-      "title": "login issue",
-      "description": "Unable to login .",
-      "status": "Closed",
-      "userId": 15,
-      "username": "komal",
-      "createdAt": "2024-08-16T11:40:01.329Z",
-      "id": 2,
-      "messages": [
-        {
-          "sender": "komal",
-          "text": "Hi",
-          "timestamp": "2024-08-16T11:40:22.055Z"
-        },
-        {
-          "sender": "pankaj",
-          "text": "helo",
-          "timestamp": "2024-08-16T11:40:28.155Z"
-        },
-        {
-          "sender": "pankaj",
-          "text": "hii",
-          "timestamp": "2024-08-19T09:02:07.297Z"
-        },
-        {
-          "sender": "pankaj",
-          "text": "hrello",
-          "timestamp": "2024-08-19T09:52:35.425Z"
-        },
-        {
-          "sender": "komal",
-          "text": "hreloadasf",
-          "timestamp": "2024-08-19T09:53:04.904Z"
-        }
-      ]
-    },
     {
       "title": "Leave issue",
       "description": "facing issue while applying leave",
@@ -656,38 +782,23 @@
           "text": "hi",
           "timestamp": "2024-08-21T10:45:40.239Z"
         }
-      ]
-    },
-    {
-      "title": "regularization issue ",
-      "description": "facing issue while regularization",
-      "status": "Closed",
-      "userId": 17,
-      "username": "Medha",
-      "createdAt": "2024-08-16T12:17:56.301Z",
-      "id": 4,
-      "messages": [
+      ],
+      "statusUpdatedAt": "2024-09-14T05:34:00.594Z",
+      "statusHistory": [
         {
-          "sender": "pankaj",
-          "text": "Hi",
-          "timestamp": "2024-08-16T12:18:23.851Z"
+          "status": "Escalated",
+          "timestamp": "2024-09-14T05:33:54.386Z"
         },
         {
-          "sender": "pankaj",
-          "text": "hi",
-          "timestamp": "2024-08-16T12:18:38.799Z"
-        },
-        {
-          "sender": "Medha",
-          "text": "hello",
-          "timestamp": "2024-08-16T12:19:44.491Z"
+          "status": "In Progress",
+          "timestamp": "2024-09-14T05:34:00.594Z"
         }
       ]
     },
     {
       "title": "logout issue",
       "description": "Unable to logout .",
-      "status": "Open",
+      "status": "In Progress",
       "userId": 17,
       "username": "Medha",
       "createdAt": "2024-08-19T05:34:27.116Z",
@@ -708,64 +819,36 @@
           "text": "hifidsfisdif",
           "timestamp": "2024-08-20T05:38:10.408Z"
         }
-      ]
-    },
-    {
-      "title": "forms issue",
-      "description": "unable to edit in  form",
-      "status": "Closed",
-      "userId": 15,
-      "username": "komal",
-      "createdAt": "2024-08-19T08:43:13.840Z",
-      "id": 6,
-      "messages": [
+      ],
+      "statusUpdatedAt": "2024-09-14T05:34:27.523Z",
+      "statusHistory": [
         {
-          "sender": "komal",
-          "text": "Hi",
-          "timestamp": "2024-08-19T08:43:23.368Z"
+          "status": "In Progress",
+          "timestamp": "2024-09-14T05:34:16.018Z"
         },
         {
-          "sender": "pankaj",
-          "text": "hello",
-          "timestamp": "2024-08-19T08:43:33.812Z"
-        }
-      ]
-    },
-    {
-      "title": "Regularization Issue",
-      "description": "Facing issue while regularize the attendance ",
-      "status": "Cancelled",
-      "userId": 15,
-      "username": "komal",
-      "createdAt": "2024-09-02T08:02:22.237Z",
-      "id": 7,
-      "statusUpdatedAt": "2024-09-02T08:07:11.382Z",
-      "messages": [
+          "status": "Escalated",
+          "timestamp": "2024-09-14T05:34:21.360Z"
+        },
         {
-          "sender": "komal",
-          "text": "Hi Admin",
-          "timestamp": "2024-09-02T08:07:32.840Z"
+          "status": "Open",
+          "timestamp": "2024-09-14T05:34:25.123Z"
+        },
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-14T05:34:27.523Z"
         }
       ]
-    },
-    {
-      "title": "toady ",
-      "description": "today ticket\n",
-      "status": "Cancelled",
-      "userId": 15,
-      "username": "komal",
-      "createdAt": "2024-09-06T11:11:09.305Z",
-      "id": 8
     },
     {
       "title": "nasmdnsanf",
       "description": "sfsdfsdfsda",
-      "status": "In Progress",
+      "status": "Cancelled",
       "userId": 15,
       "username": "komal",
       "createdAt": "2024-09-06T12:37:25.617Z",
       "id": 9,
-      "statusUpdatedAt": "2024-09-06T12:55:43.539Z",
+      "statusUpdatedAt": "2024-09-14T05:40:03.543Z",
       "statusHistory": [
         {
           "status": "In Progress",
@@ -782,6 +865,106 @@
         {
           "status": "In Progress",
           "timestamp": "2024-09-06T12:55:43.539Z"
+        },
+        {
+          "status": "Open",
+          "timestamp": "2024-09-14T05:40:03.543Z"
+        }
+      ]
+    },
+    {
+      "title": "today222",
+      "description": "ddgndfkngkng",
+      "status": "Cancelled",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-14T06:25:42.465Z",
+      "id": 10,
+      "messages": [
+        {
+          "sender": "pankaj",
+          "text": "hiiei",
+          "timestamp": "2024-09-14T06:26:49.862Z"
+        }
+      ],
+      "statusUpdatedAt": "2024-09-14T06:28:06.285Z",
+      "statusHistory": [
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-14T06:27:01.770Z"
+        },
+        {
+          "status": "Escalated",
+          "timestamp": "2024-09-14T06:27:51.511Z"
+        },
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-14T06:28:06.285Z"
+        }
+      ]
+    },
+    {
+      "title": "dngndknke`s",
+      "description": "jebjrhrkjhrjhojroh",
+      "status": "Cancelled",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-16T06:28:34.389Z",
+      "id": 11,
+      "statusUpdatedAt": "2024-09-16T06:29:26.332Z",
+      "statusHistory": [
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-16T06:29:05.550Z"
+        },
+        {
+          "status": "Escalated",
+          "timestamp": "2024-09-16T06:29:26.332Z"
+        }
+      ]
+    },
+    {
+      "title": "vdsgdfgdgfdf",
+      "description": "fbgfgfhgf",
+      "status": "Cancelled",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-16T06:31:38.164Z",
+      "id": 12
+    },
+    {
+      "title": "fdbfddfg",
+      "description": "bduefhguhrehg",
+      "status": "Cancelled",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-16T06:34:10.626Z",
+      "id": 13,
+      "statusUpdatedAt": "2024-09-16T06:34:23.165Z",
+      "statusHistory": [
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-16T06:34:18.490Z"
+        },
+        {
+          "status": "Escalated",
+          "timestamp": "2024-09-16T06:34:23.165Z"
+        }
+      ]
+    },
+    {
+      "title": "logout issue",
+      "description": "facing logout issue",
+      "status": "In Progress",
+      "userId": 15,
+      "username": "komal",
+      "createdAt": "2024-09-16T10:07:15.966Z",
+      "id": 14,
+      "statusUpdatedAt": "2024-09-18T07:12:54.051Z",
+      "statusHistory": [
+        {
+          "status": "In Progress",
+          "timestamp": "2024-09-18T07:12:54.051Z"
         }
       ]
     }

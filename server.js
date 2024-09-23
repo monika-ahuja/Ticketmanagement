@@ -1,3 +1,16 @@
+const mongoose = require('mongoose');
+const mongoUri = 'mongodb://localhost:27017/ticketsystem'; // For local MongoDB
+// or
+// const mongoUri = 'mongodb+srv://<username>:<password>@cluster0.mongodb.net/ticketmanagement?retryWrites=true&w=majority'; // For MongoDB Atlas
+
+mongoose.connect(mongoUri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected successfully'))
+.catch((err) => console.log('MongoDB connection error:', err));
+
+
 const jsonServer = require('json-server');
 const auth = require('json-server-auth');
 const jwt = require('jsonwebtoken');
@@ -6,6 +19,8 @@ const bcrypt = require('bcrypt');
 const http = require('http');
 //const socketIo = require('socket.io');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 
 // Create JSON Server
 const server = jsonServer.create();

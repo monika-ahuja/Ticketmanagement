@@ -15,6 +15,14 @@
             <a class="nav-link" routerLink="/admin/audit-logs">Logs</a>
           </li>
         </ul>
+
+        <!-- <div class="messages-container">
+          <span>
+            <i class="fa fa-envelope"></i> Messages
+            <!-- Show the badge if there's a new message -->
+            <!-- <span  class="badge"></span>
+          </span>
+        </div> --> 
         <ul class="navbar-nav ms-auto">
           <li class="nav-item d-flex align-items-center">
             <span class="avatar" *ngIf="currentUser">{{ getAvatarText(currentUser.username) }}</span>

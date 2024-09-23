@@ -39,7 +39,17 @@ export class WebSocketService {
     return this.messageSubject.asObservable();
    //return this.socket.asObservable();
   }
+
   
+// web-socket.service.ts
+sendImage(base64Data: string, fileName: string) {
+  const message = {
+    type: 'image',
+    fileName: fileName,
+    data: base64Data,
+  };
+  this.sendMessage(message);
+}
 
   // closeConnection(): void {
   //   this.socket.complete();

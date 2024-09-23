@@ -41,7 +41,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let ticket of filteredTickets">
-        <td>{{ ticket.id}}</td>
+        <td>TD-{{ ticket.id }}</td>
         <td>{{ ticket.title }}</td>
         <td>{{ ticket.description }}</td>
         <td>{{ ticket.username }}</td>
@@ -50,7 +50,8 @@
           'status-open': ticket.status === 'Open',
           'status-inprogress': ticket.status === 'In Progress',
           'status-escalated': ticket.status === 'Escalated',
-          'status-closed': ticket.status === 'Closed'
+          'status-closed': ticket.status === 'Closed',
+          'status-cancelled': ticket.status === 'Cancelled'
          }">
          {{ ticket.status }}
       </td>
@@ -59,12 +60,16 @@
 
      <!-- Only show the button if the ticket is Open -->
      <!-- [routerLink]="['/home/tickets/ticket-details', ticket.id]" -->
-     <button   class="btn btn-primary manage-button" *ngIf="ticket.status === 'Open' || ticket.status==='In Progress' || ticket.status==='Escalated' || ticket.status==='Cancelled'" (click)="navigateToTicketDetails(ticket.id)" >
-     Manage
-    </button>
-    <button  class="btn btn-primary manage-button" *ngIf="ticket.status === 'Closed'"(click)="navigateToTicketDetails(ticket.id)">
-      View Details
-     </button>
+     <span   class="btn btn-primary"
+     data-toggle="tooltip" data-placement="top" title="Manage Ticket"
+      *ngIf="ticket.status === 'Open' || ticket.status==='In Progress' || ticket.status==='Escalated'" (click)="navigateToTicketDetails(ticket.id)" >
+      <i class="bi bi-ticket"></i>
+  
+      </span>
+    <span  class="btn btn-primary" *ngIf="ticket.status === 'Closed' || ticket.status==='Cancelled'" (click)="navigateToTicketDetails(ticket.id)"
+    data-toggle="tooltip" data-placement="top" title="View Details">
+    <i class="bi bi-eye"></i>
+    </span>
     </td>
       </tr>
     </tbody>

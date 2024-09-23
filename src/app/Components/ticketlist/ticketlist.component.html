@@ -146,18 +146,21 @@
               'status-closed': ticket.status === 'Closed',
               'status-cancelled': ticket.status === 'Cancelled'
              }">{{ ticket.status }}</td>
-            <td>
+             <!-- -------------------------- -->
+            <!-- <td>
               <!-- <button
                 *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
                 class="btn btn-danger"
                 (click)="cancelTicket(ticket.id)"
               > -->
-              <span  *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
+              <!-- ---------------------------- -->
+              <!-- <span  *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
               class="btn btn-danger icon-button"
-            
+              data-toggle="tooltip" data-placement="top" title="Cancel the ticket"
               (click)="cancelTicket(ticket.id)">
               <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancel -->
-            </span>
+            <!-- </span>  -->
+<!-- ---------------------------------- -->
               <!-- </button> -->
               <!-- <button *ngIf="ticket.status === 'Cancelled'" class="btn btn-secondary" disabled>
                 <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancelled -->
@@ -166,13 +169,13 @@
               <!-- <span *ngIf="ticket.status === 'Cancelled'" class="btn btn-secondary icon-button" disabled>
                 <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancelled -->
               <!-- </span> --> 
-
-              <span *ngIf="ticket.status === 'Cancelled'" class="view-details-icon" 
-              data-bs-toggle="tooltip"
+<!-- _____________________________ -->
+              <!-- <span *ngIf="ticket.status === 'Cancelled'" class="view-details-icon" 
+              data-toggle="tooltip" data-placement="top" title="View ticket details"
               [routerLink]="['/ticket-list', ticket.id]">
                 <i class="bi bi-eye"></i>
-              </span>
-  
+              </span> -->
+  <!-- ___________________________________ -->
               <!-- View Details button with Bootstrap icon -->
               <!-- <button
                 *ngIf="ticket.status === 'Closed'"
@@ -182,12 +185,31 @@
                 <i class="bi bi-eye"></i>
                 <span class="btn-text">View Details</span>
               </button> -->
+<!-- 
+              _________________________ -->
                  <!-- Icon for View Details without button styling -->
-            <span *ngIf="ticket.status === 'Closed'" class="view-details-icon" 
-            data-bs-toggle="tooltip"
+            <!-- <span *ngIf="ticket.status === 'Closed'" class="view-details-icon" 
+            data-toggle="tooltip" data-placement="top" title="View ticket details"
             [routerLink]="['/ticket-list', ticket.id]">
               <i class="bi bi-eye"></i>
             </span>
+            </td> -->
+
+            <td>
+              <!-- Show Cancel button if ticket is Open, In Progress, or Escalated -->
+              <!-- <span *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
+                class="btn btn-danger icon-button"
+                data-toggle="tooltip" data-placement="top" title="Cancel the ticket"
+                (click)="cancelTicket(ticket.id)">
+                <i class="bi bi-x-circle-fill"></i> <!-- Icon for Cancel -->
+              <!-- </span> --> 
+  <!-- <span *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'">|</span> -->
+              <!-- View Details button should be always shown -->
+              <span class="view-details-icon" 
+                data-toggle="tooltip" data-placement="top" title="View ticket details"
+                [routerLink]="['/ticket-list', ticket.id]">
+                <i class="bi bi-eye"></i>
+              </span>
             </td>
           </tr>
         </tbody>

@@ -1,7 +1,8 @@
 <p>Admin ticket works!</p>
   <div class="container mt-5">
-    <button class="btn btn-secondary mb-3" (click)="goBack()">Back</button>
-    
+    <!-- <button class="btn btn-secondary mb-3" (click)="goBack()">Back</button> -->
+    <span (click)="goBack()" >
+      <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
       <h2>Tickets for User {{ selectedUserId }} </h2>
       <table class="table table-bordered mt-4">
         <thead>
@@ -28,7 +29,8 @@
              {{ ticket.status }}
           </td>
             <td>
-              <span (click)="viewTicketDetails(ticket.id)" class="btn btn-primary" >
+              <span (click)="viewTicketDetails(ticket.id)" class="btn btn-primary" 
+              data-toggle="tooltip" data-placement="top" title="View ticket details">
                 <i class="bi bi-eye" ></i>
               </span>
               <!-- <button (click)="viewTicketDetails(ticket.id)" class="btn btn-primary" [disabled]="ticket.status === 'Cancelled'">View Details</button> -->

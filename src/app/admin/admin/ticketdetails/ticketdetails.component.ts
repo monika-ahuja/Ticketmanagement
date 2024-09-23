@@ -227,4 +227,23 @@ this.toastr.success("Message add successfully")
   }
   
 
+  onFileSelect(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const fileType = file.type;
+      // Validate file type (accept only JPEG and PNG)
+      if (fileType === 'image/jpeg' || fileType === 'image/png') {
+        // Convert the file to Base64
+        const reader = new FileReader();
+        reader.onload = () => {
+          const base64Data = reader.result as string;
+          // Send the image data via WebSocket
+          this.webSocketService.sendImage(base64Data, file.name);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert('Please upload a JPEG or PNG image.');
+      }
+    }
+  }
 }

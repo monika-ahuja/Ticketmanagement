@@ -3,10 +3,17 @@
 <div class="container mt-5">
 <div>
   <!-- Show this button if navigated from 'user-tickets' -->
-  <button *ngIf="fromPage === 'user-tickets'" (click)="goBack()">Back</button>
-
-  <!-- Show this button if navigated from 'all-tickets' -->
-  <button *ngIf="fromPage === 'all-tickets'" (click)="goBack()">Back</button>
+<!-- <button *ngIf="fromPage === 'user-tickets'" (click)="goBack()">Back</button>
+ <span (click)="goBack()">
+        <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
+  Show this button if navigated from 'all-tickets' -->
+  <!-- <button *ngIf="fromPage === 'all-tickets'" (click)="goBack()">Back</button> -->
+    <!-- Show this button if navigated from 'user-tickets' -->
+  <span (click)="goBack()" *ngIf="fromPage === 'user-tickets'" >
+    <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
+    <!-- Show this button if navigated from 'all-tickets'  -->
+    <span (click)="goBack()" *ngIf="fromPage === 'all-tickets'" >
+      <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
 </div>
 
 <h3>Ticket Details for User: {{ ticket.username }}</h3> <!-- Display the username -->
@@ -22,15 +29,22 @@
         
       }">  {{ ticket.status }}</span>
   </p>
-  <p><strong>Created_Date:</strong> {{ ticket.createdAt |  date:'short'}}
+  <!-- <p><strong>Created_Date:</strong> {{ ticket.createdAt |  date:'short'}}
+  </p> -->
+
+  <p><strong>Status History: </strong>
+    <!-- <p> -->
+      <button class="btn-btn-secondary" (click)="toggleHistory()"
+      data-toggle="tooltip" data-placement="top" title="View status history">View</button>
+    <!-- </p> -->
   </p>
  <!-- <p><strong>Updated_Date:</strong>
   {{ ticket.statusUpdatedAt |  date:'short' }}
   </p> -->
    <!-- Replace Updated_Date with View History button -->
-   <p>
+   <!-- <p>
     <button class="btn custom-button" (click)="toggleHistory()">View History</button>
-  </p>
+  </p> -->
 
   <!-- Collapsible card for Status History -->
   <div *ngIf="showHistory" class="card mt-3">
@@ -48,7 +62,9 @@
         <tbody>
           <tr *ngFor="let history of ticket.statusHistory">
             <td>{{ history.status }}</td>
-            <td>{{ history.timestamp | date:'short' }}</td>
+            <td>{{ history.timestamp | date:'medium' }}({{ history.timestamp | timeAgo }})
+              <!-- {{ log.timestamp | date:'medium' }} ({{ log.timestamp | timeAgo }}) -->
+            </td>
           </tr>
         </tbody>
       </table>
@@ -81,6 +97,11 @@
   <h3>Send a Message</h3>
   <!-- [disabled]="ticket.status === 'Closed'" -->
   <textarea [(ngModel)]="message" rows="3" cols="30"  class="message-textarea" placeholder="Type your message here" ></textarea>&nbsp;
+  <!-- attach-file.component.html -->
+<!-- <div>
+  <input type="file" (change)="onFileSelect($event)" accept="image/jpeg, image/png" />
+</div> -->
+
   <button (click)="sendMessage()"  class="btn btn-primary"  >Send Message</button>
 </div>
 

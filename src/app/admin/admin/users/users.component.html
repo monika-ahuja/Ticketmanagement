@@ -18,7 +18,7 @@
                 <td>{{ user.email }}</td>
                 <td>{{ user.role }}</td>
                 <td>
-                  <span (click)="deleteUser(user.id)" class="btn btn-danger"   data-toggle="tooltip" data-placement="top" title="Delete an item">
+                  <span (click)="deleteUser(user.id)" class="btn btn-danger"   data-toggle="tooltip" data-placement="top" title="Delete the user">
                     <i class="bi bi-trash3"></i>
                   </span>
                   <!-- <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button> -->
@@ -26,7 +26,8 @@
 
                 </td>
                 <td>
-                  <span (click)="viewTickets(user.id)" class="btn btn-primary">
+                  <span (click)="viewTickets(user.id)" class="btn btn-primary"
+                  data-toggle="tooltip" data-placement="top" title="View user tickets">
                     <i class="bi bi-eye"></i>
                   </span>
                   <!-- <button (click)="viewTickets(user.id)" class="btn btn-primary">View History</button> -->

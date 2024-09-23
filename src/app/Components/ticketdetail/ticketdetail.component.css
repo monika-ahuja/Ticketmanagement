@@ -65,3 +65,10 @@
   font-weight: bold;
   font-size:large
 }
+
+.custom-btn{
+  background-color: rgb(123, 145, 203);
+  color:rgb(209, 11, 37);
+  font-weight: bold;
+  font-size:large
+}

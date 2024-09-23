@@ -13,7 +13,7 @@ import { TicketsComponent } from '../admin/tickets/tickets.component';
 import { TicketComponent } from '../admin/ticket/ticket.component';
 import { TicketdetailsComponent } from '../admin/ticketdetails/ticketdetails.component';
 //import { TicketDetailComponent } from '../admin/ticket-detail/ticket-detail.component';
-
+// import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import { TicketdetailsComponent } from '../admin/ticketdetails/ticketdetails.com
     AdminRoutingModule,
     NgxPaginationModule,
     MatOptionModule,
+   // NgChartsModule,
     // MatOptionSelectionChange
   ]
 })
