@@ -78,10 +78,11 @@ window.onpopstate = () => {
    // Method to determine greeting based on time
    getGreeting(): string {
     const currentHour = new Date().getHours();
+    //console.log('currentHour',currentHour)
 
     if (currentHour < 12) {
       return 'Good Morning';
-    } else if (currentHour >= 12 && currentHour < 18) {
+    } else if (currentHour >= 12 && currentHour < 17) {
       return 'Good Afternoon';
     } else {
       return 'Good Evening';

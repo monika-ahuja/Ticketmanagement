@@ -74,7 +74,8 @@
 
   <hr>
   <label for="status" ><b>Update Status:</b></label>&nbsp;
-  <select id="status" [(ngModel)]="newStatus" (change)="updateStatus($event)" [disabled]="ticket.status === 'Closed'">
+  <select id="status" [(ngModel)]="newStatus" (change)="updateStatus($event)"
+   [disabled]="ticket.status === 'Closed'  || ticket.status === 'Cancelled'">
     <option value="Open">Open</option>
     <option value="In Progress">In Progress</option>
     <option value="Escalated">Escalated</option>
@@ -93,7 +94,7 @@
   <button (click)="sendMessage()"  class="btn btn-primary" [disabled]="ticket.status === 'Closed'">Send Message</button>
 </div> -->
 
-<div *ngIf="ticket.status !== 'Closed'" class="message-section mt-3">
+<div *ngIf="ticket.status !== 'Closed' && ticket.status !== 'Cancelled'" class="message-section mt-3">
   <h3>Send a Message</h3>
   <!-- [disabled]="ticket.status === 'Closed'" -->
   <textarea [(ngModel)]="message" rows="3" cols="30"  class="message-textarea" placeholder="Type your message here" ></textarea>&nbsp;
@@ -109,5 +110,10 @@
  <div *ngIf="ticket.status === 'Closed'" class="alert alert-warning alert-sm mt-3">
   This ticket is closed.
 </div>
+  <!-- Display message if ticket is cancelled -->
+  <div *ngIf="ticket.status === 'Cancelled'" class="alert alert-danger alert-sm mt-3">
+    This ticket is cancelled.
+  </div>
+
 </div>
   

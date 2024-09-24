@@ -57,13 +57,37 @@
       "action": "User logged in",
       "userId": 15,
       "id": 4
+    },
+    {
+      "timestamp": "2024-09-24T05:47:43.655Z",
+      "action": "User logged in",
+      "userId": 15,
+      "id": 5
+    },
+    {
+      "timestamp": "2024-09-24T05:49:54.201Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 6
+    },
+    {
+      "timestamp": "2024-09-24T11:11:40.599Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 7
+    },
+    {
+      "timestamp": "2024-09-24T12:16:49.251Z",
+      "action": "User logged in",
+      "userId": 12,
+      "id": 8
     }
   ],
   "tickets": [
     {
       "title": "Leave issue",
       "description": "facing issue while applying leave",
-      "status": "In Progress",
+      "status": "Closed",
       "userId": 17,
       "username": "Medha",
       "createdAt": "2024-08-16T12:13:31.310Z",
@@ -75,7 +99,7 @@
           "timestamp": "2024-08-21T10:45:40.239Z"
         }
       ],
-      "statusUpdatedAt": "2024-09-14T05:34:00.594Z",
+      "statusUpdatedAt": "2024-09-24T12:22:16.605Z",
       "statusHistory": [
         {
           "status": "Escalated",
@@ -84,6 +108,10 @@
         {
           "status": "In Progress",
           "timestamp": "2024-09-14T05:34:00.594Z"
+        },
+        {
+          "status": "Closed",
+          "timestamp": "2024-09-24T12:22:16.605Z"
         }
       ]
     },
