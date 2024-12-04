@@ -25,6 +25,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
   //currentUser: any = { username: 'user123', email: 'user@example.com', mobile: '1234567890' }; // Replace with actual user data
   tickets: any[] = [];
 
+  unreadMessagesCount: number = 0;
+  newMessageNotification: boolean = false;
+
   private inactivitySubscription!: Subscription;
   public timeSinceLastActivity!: number;
   private inactivityTimer: any;

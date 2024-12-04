@@ -62,6 +62,17 @@
     font-weight: bold;
   }
 
+  .status-cancelled {  /* New style for cancelled tickets */
+    /* background-color: #f3f309; */
+    color: rgb(233, 233, 10);
+    font-size:medium;
+    font-weight: bold;
+    font-size:18px;
+    text-decoration: line-through;
+  }
+
+
+
 
   /* ticket-status.component.css or global stylesheet */
 .manage-button {

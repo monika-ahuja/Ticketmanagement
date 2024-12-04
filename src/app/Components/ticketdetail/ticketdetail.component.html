@@ -10,7 +10,16 @@
  
   <!-- <button class="btn btn-secondary mb-3" routerLink="/ticket-list">Back</button> -->
   <div *ngIf="ticket">
-    <h2 align="center">Ticket Details</h2>
+    <div class="row-md-3 d-flex justify-content-between align-items-center">
+    <h2 align="center">Ticket Details </h2>
+    <button *ngIf="ticket.status === 'Open' || ticket.status === 'In Progress' || ticket.status === 'Escalated'"
+    class="btn btn-danger"
+   
+    (click)="cancelTicket(ticket.id)">
+    <i class="bi bi-x-circle-fill"></i> 
+    Cancel ticket<!-- Icon for Cancel -->
+    </button>
+  </div>
     <table class="table table-bordered">
       <tr>
         <th>Title</th>
@@ -32,18 +41,51 @@
           {{ ticket.status }}
         </td>
       </tr>
+       <tr>
+        <th>Status History</th>
+        <!-- <p> -->
+          <button class="custom-btn" (click)="toggleHistory()"
+          data-toggle="tooltip" data-placement="top" title="View status history">View</button>
+        <!-- </p> -->
+      </tr>
       <!-- <tr>
         <th>StatusUpdated At</th>
         <td>{{ ticket.statusUpdatedAt | date: 'short' }}</td>
       </tr> -->
-       <tr>
+       <!-- <tr>
         <th>Updated date</th>
         <td>{{ ticket.statusUpdatedAt | date: 'short' }}</td>
-      </tr>
+      </tr> -->
       <!-- <p>Status Updated At: {{ ticket.statusUpdatedAt | date:'medium' }}</p>  -->
     </table>
 
-
+    <!-- <p>
+      <button class="btn custom-button" (click)="toggleHistory()">View Status History</button>
+    </p> -->
+  
+    <!-- Collapsible card for Status History -->
+    <div *ngIf="showHistory" class="card mt-3">
+      <div class="card-header">
+        <h5>Status History</h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let history of ticket.statusHistory">
+              <td>{{ history.status }}</td>
+              <td>{{ history.timestamp | date:'short' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
 
     <!-- <div class="message-section mt-3">
       <h3 align="center">Send a Message</h3>

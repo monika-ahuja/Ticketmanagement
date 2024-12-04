@@ -1,12 +1,19 @@
-<p>ticketdetails works!</p>
+<!-- <p>ticketdetails works!</p> -->
 
 <div class="container mt-5">
 <div>
   <!-- Show this button if navigated from 'user-tickets' -->
-  <button *ngIf="fromPage === 'user-tickets'" (click)="goBack()">Back</button>
-
-  <!-- Show this button if navigated from 'all-tickets' -->
-  <button *ngIf="fromPage === 'all-tickets'" (click)="goBack()">Back</button>
+<!-- <button *ngIf="fromPage === 'user-tickets'" (click)="goBack()">Back</button>
+ <span (click)="goBack()">
+        <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
+  Show this button if navigated from 'all-tickets' -->
+  <!-- <button *ngIf="fromPage === 'all-tickets'" (click)="goBack()">Back</button> -->
+    <!-- Show this button if navigated from 'user-tickets' -->
+  <span (click)="goBack()" *ngIf="fromPage === 'user-tickets'" >
+    <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
+    <!-- Show this button if navigated from 'all-tickets'  -->
+    <span (click)="goBack()" *ngIf="fromPage === 'all-tickets'" >
+      <i class="bi bi-arrow-left-circle-fill "style="font-size: 2rem;"></i></span>
 </div>
 
 <h3>Ticket Details for User: {{ ticket.username }}</h3> <!-- Display the username -->
@@ -22,15 +29,22 @@
         
       }">  {{ ticket.status }}</span>
   </p>
-  <p><strong>Created_Date:</strong> {{ ticket.createdAt |  date:'short'}}
+  <!-- <p><strong>Created_Date:</strong> {{ ticket.createdAt |  date:'short'}}
+  </p> -->
+
+  <p><strong>Status History: </strong>
+    <!-- <p> -->
+      <button class="btn-btn-secondary" (click)="toggleHistory()"
+      data-toggle="tooltip" data-placement="top" title="View status history">View</button>
+    <!-- </p> -->
   </p>
  <!-- <p><strong>Updated_Date:</strong>
   {{ ticket.statusUpdatedAt |  date:'short' }}
   </p> -->
    <!-- Replace Updated_Date with View History button -->
-   <p>
+   <!-- <p>
     <button class="btn custom-button" (click)="toggleHistory()">View History</button>
-  </p>
+  </p> -->
 
   <!-- Collapsible card for Status History -->
   <div *ngIf="showHistory" class="card mt-3">
@@ -48,7 +62,9 @@
         <tbody>
           <tr *ngFor="let history of ticket.statusHistory">
             <td>{{ history.status }}</td>
-            <td>{{ history.timestamp | date:'short' }}</td>
+            <td>{{ history.timestamp | date:'medium' }}({{ history.timestamp | timeAgo }})
+              <!-- {{ log.timestamp | date:'medium' }} ({{ log.timestamp | timeAgo }}) -->
+            </td>
           </tr>
         </tbody>
       </table>
@@ -58,7 +74,8 @@
 
   <hr>
   <label for="status" ><b>Update Status:</b></label>&nbsp;
-  <select id="status" [(ngModel)]="newStatus" (change)="updateStatus($event)" [disabled]="ticket.status === 'Closed'">
+  <select id="status" [(ngModel)]="newStatus" (change)="updateStatus($event)"
+   [disabled]="ticket.status === 'Closed'  || ticket.status === 'Cancelled'">
     <option value="Open">Open</option>
     <option value="In Progress">In Progress</option>
     <option value="Escalated">Escalated</option>
@@ -77,10 +94,15 @@
   <button (click)="sendMessage()"  class="btn btn-primary" [disabled]="ticket.status === 'Closed'">Send Message</button>
 </div> -->
 
-<div *ngIf="ticket.status !== 'Closed'" class="message-section mt-3">
+<div *ngIf="ticket.status !== 'Closed' && ticket.status !== 'Cancelled'" class="message-section mt-3">
   <h3>Send a Message</h3>
   <!-- [disabled]="ticket.status === 'Closed'" -->
   <textarea [(ngModel)]="message" rows="3" cols="30"  class="message-textarea" placeholder="Type your message here" ></textarea>&nbsp;
+  <!-- attach-file.component.html -->
+<!-- <div>
+  <input type="file" (change)="onFileSelect($event)" accept="image/jpeg, image/png" />
+</div> -->
+
   <button (click)="sendMessage()"  class="btn btn-primary"  >Send Message</button>
 </div>
 
@@ -88,5 +110,10 @@
  <div *ngIf="ticket.status === 'Closed'" class="alert alert-warning alert-sm mt-3">
   This ticket is closed.
 </div>
+  <!-- Display message if ticket is cancelled -->
+  <div *ngIf="ticket.status === 'Cancelled'" class="alert alert-danger alert-sm mt-3">
+    This ticket is cancelled.
+  </div>
+
 </div>
   

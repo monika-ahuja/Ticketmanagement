@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # LoginApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
@@ -28,4 +28,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 =======
 # Ticketmanagement
->>>>>>> 4451f8d17da91591099f1eb4f7bda9bca3f09ed8
+
+
+## Run JSON Server
+Run `npx json-server-auth db.json` for Json Server.Navigate to `  http://localhost:3000`.
+
+## Run Websocket Server
+Run `node websocket-server.js` for websocket server.Start on `ws://localhost:8080`.
+
+

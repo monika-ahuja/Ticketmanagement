@@ -1,33 +1,7 @@
-<!-- <div class="container mt-5">
-    
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <h2>Audit Logs</h2>
-          <table class="table table-bordered mt-4">
-            <thead>
-              <tr>
-                <th>Timestamp</th>
-                <th>Action</th>
-                <th>User ID</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let log of auditLogs">
-                <td>{{ log.timestamp | date:'medium' }} ({{ log.timestamp | timeAgo }})</td>
-                <td>{{ log.action }}</td>
-                <td>{{ log.userId }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-     -->
-
      <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <h2>Audit Logs</h2>
+          <h2 style="text-align: center">Audit Logs</h2>
           <div class="d-flex justify-content-end mb-3">
             <label for="entries" class="mr-2">Entries per page:</label>
             <select id="entries" [(ngModel)]="itemsPerPage" class="form-control w-auto">
